@@ -2,9 +2,9 @@
 
 if __name__ == "__main__":
 
-    import hddien_4
+    import hidden_4
 
-    name = dir(hddien_4)
+    name = dir(hidden_4)
 
     for n in name:
         if n[:2] != "__":

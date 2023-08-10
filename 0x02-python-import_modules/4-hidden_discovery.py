@@ -7,4 +7,4 @@ if __name__ == "__main__":
 
     for n in name:
         if n[:2] != "__":
-            print(name)
+            print(n)

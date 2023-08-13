@@ -10,34 +10,27 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *list_a = *head;
-	listint_t *list_b = *head;
-
+	listint_t *a = *head;
+	listint_t *b = *head;
 
 	if (*head == NULL)
-	{
 		return (1);
+
+	while (b && b->next && b->next->next)
+	{
+		a = a->next;
+		b = b->next->next;
 	}
 
-	while (list_a->next && list_b->next)
+	a = reverse_list(&a);
+	b = *head;
+	while (a && b)
 	{
-		list_a = list_a->next;
-		list_b = list_b->next;
-	}
-
-	list_a = *head;
-	list_b = reverse_listint(&list_b);
-
-	while (list_a && list_b)
-	{
-		if (list_a->n != list_b->n)
-		{
+		if (a->n != b->n)
 			return (0);
-		}
-		list_a = list_a->next;
-		list_b = list_b->next;
+		a = a->next;
+		b = b->next;
 	}
+
 	return (1);
-
-
 }

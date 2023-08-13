@@ -38,6 +38,6 @@ int is_palindrome(listint_t **head)
 		list_b = list_b->next;
 	}
 	return (1);
-	
+
 
 }

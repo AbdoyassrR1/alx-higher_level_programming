@@ -23,8 +23,8 @@ int is_palindrome(listint_t **head)
 
 	while (curr != NULL)
 	{
-		arr[len] = (*curr).n;
-		curr = (*curr).next;
+		arr[len] = curr->n;
+		curr = curr->next;
 		len++;
 	}
 

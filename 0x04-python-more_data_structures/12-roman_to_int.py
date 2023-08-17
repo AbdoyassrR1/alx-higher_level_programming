@@ -15,7 +15,7 @@ def roman_to_int(roman_string):
             "D": 500,
             "M": 1000
     }
-    num = 0
+    sum = 0
 
     for i in range(len(roman_string)):
 
@@ -24,8 +24,8 @@ def roman_to_int(roman_string):
 
         if (i != (len(roman_string) - 1) and
                 roman[roman_string[i]] < roman[roman_string[i + 1]]):
-            num += roman[roman_string[i]] * -1
+            sum += roman[roman_string[i]] * -1
 
         else:
-            num += roman[roman_string[i]]
-    return (num)
+            sum += roman[roman_string[i]]
+    return (sum)

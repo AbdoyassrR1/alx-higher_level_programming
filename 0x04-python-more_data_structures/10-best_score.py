@@ -2,7 +2,7 @@
 
 def best_score(a_dictionary):
 
-    if not a_dictionary or len(a_dictionary) == 0:
+    if not a_dictionary:
         return None
     else:
         nums = []

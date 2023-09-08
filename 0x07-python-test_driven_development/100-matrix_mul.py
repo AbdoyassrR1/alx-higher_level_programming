@@ -37,7 +37,6 @@ def mult(m_a, m_b):
     return new_matrix
 
 
-
 def matrix_mul(m_a, m_b):
     """ matrix produc """
     a_list_error = "m_a must be a list"

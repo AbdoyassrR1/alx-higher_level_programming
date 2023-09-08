@@ -1,0 +1,49 @@
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello.")
+Hello.
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("Holberton School")
+Holberton School
+
+>>> text_indentation("Holberton.School")
+Holberton.
+
+School
+
+>>> text_indentation("    Hello")
+Hello
+
+>>> text_indentation("Hello      ")
+Hello
+
+>>> text_indentation("      ")
+<BLANKLINE>
+
+
+>>> text_indentation("")
+<BLANKLINE>
+
+    >>> text_indentation(22)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+>>> text_indentation("    Shaza Ali.    This is my name.   ")
+Shaza Ali.
+<BLANKLINE>
+<BLANKLINE>
+This is my name.
+<BLANKLINE>
+<BLANKLINE>
+
+    >>> text_indentation("A very \n new line.")
+    A very
+    new line.
+    <BLANKLINE>
+    <BLANKLINE>
+
+
+

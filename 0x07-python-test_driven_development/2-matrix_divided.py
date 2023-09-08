@@ -6,7 +6,6 @@ def matrix_divided(matrix, div):
     """
      function that divides all elements of a matrix
      Args: matrix and a div: number to be divide on or none
-     Returns : a new matrix, elements rounded to 2 decimal places or matrix if div == None
     """
 
     if div == 0:

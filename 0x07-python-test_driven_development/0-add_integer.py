@@ -3,6 +3,8 @@
 """
 this module contain functoin that adds two numbers
 """
+
+
 def add_integer(a, b=98):
     """functoin to add numbers"""
     if not isinstance(a, int) and not isinstance(a, float):

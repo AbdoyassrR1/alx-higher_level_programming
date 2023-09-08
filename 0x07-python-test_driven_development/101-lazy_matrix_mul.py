@@ -6,6 +6,7 @@
 
 import numpy as np
 
+
 def lazy_matrix_mul(m_a, m_b):
-    """ multiply two matrix with numpy """
+    """ multiply two matrix"""
     return np.dot(m_a, m_b)

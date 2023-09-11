@@ -5,4 +5,4 @@
 
 def lookup(obj):
     """ this function is to print the """
-    return list(dir(obj))
+    return dir(obj)

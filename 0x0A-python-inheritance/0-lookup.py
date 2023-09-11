@@ -4,5 +4,7 @@
 
 
 def lookup(obj):
-    """ this function is to print the """
+    """ this function is to print the
+    avilable method
+    """
     return dir(obj)

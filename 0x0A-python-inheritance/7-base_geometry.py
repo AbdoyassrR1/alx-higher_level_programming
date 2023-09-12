@@ -1,23 +1,35 @@
 #!/usr/bin/python3
 """
-Module for class that inherits from BaseGeometry
+Module for basic class implementation
 """
 
-"""Parent class"""
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+class BaseGeometry:
+    """Basic class named BaseGeometry
+    """
 
-class Rectangle(BaseGeometry):
-    """Basic class that inherits from BaseGeometry"""
-
-    def __init__(self, width, height):
-        """Initialize a new Rectangle.
-
-        Args:
-            width (int): The width of the new Rectangle.
-            height (int): The height of the new Rectangle.
+    def area(self):
         """
-        self.integer_validator("width", width)
-        self.__width = width
-        self.integer_validator("height", height)
-        self.__height = height
+        Public instance method: raises exception
+        No implementation yet
+        Exception: area() is not implemented
+        """
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """
+        public instance method: validate value
+        Args :
+            name and value
+        Raises :
+            if value is not an integer: TypeError exception,
+            with the message <name> must be an integer
+            if value is less or equal to 0: raise a ValueError
+            exception with the message <name> must be greater than 0
+        """
+
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
+
+        if value <= 0:
+            raise ValueError("{} must be greater than 0".format(name))

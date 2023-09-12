@@ -2,6 +2,7 @@
 
 """empty class"""
 
+
 class BaseGeometry:
     """just empty class"""
     pass

@@ -1,8 +1,16 @@
 #!/usr/bin/python3
 
-
+"""
+writes a string to a text file (UTF8) and
+returns the number of characters"""
 def write_file(filename="", text=""):
 
+
+
     with open(filename, "w", encoding="utf-8") as f:
-        w = f.write(text)
-        return w
+        f.write(text)
+
+    with open(filename, "r", encoding="utf-8") as f:
+        r = f.read()
+        c = len(r)
+        return c

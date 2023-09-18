@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+"""only class rectangle """
 
 from modles.base import Base
 
 
 class Rectangle(Base):
+    """class rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """constructor"""
         if type(width) is not int:
@@ -135,6 +137,7 @@ class Rectangle(Base):
         else:
             for key, value in kwagrs.items():
                 setattr(self, key, value)
+
     def to_dictionary(self):
         """dictionary representation of a Rectangle"""
         dict_of_rectangle = {"id": self.id,

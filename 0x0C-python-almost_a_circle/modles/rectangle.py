@@ -5,6 +5,7 @@ from modles.base import Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
+        """constructor"""
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -107,8 +108,9 @@ class Rectangle(Base):
     def __str__(self) -> str:
         """ string representation
         [Rectangle] (<id>) <x>/<y> - <width>/<height>
-        """ 
-        return f"[Rectangle] {self.id} {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        """
+        return f"[Rectangle]\
+            {self.id} {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwagrs):
         """hat assigns an argument to each attribute:
@@ -119,7 +121,7 @@ class Rectangle(Base):
         5th argument should be the y attribute"""
         if args and len(args) != 0:
             for arg in args:
-                
+
                 if len(args) >= 1:
                     self.id = args[0]
                 elif len(args) >= 2:
@@ -133,3 +135,11 @@ class Rectangle(Base):
         else:
             for key, value in kwagrs.items():
                 setattr(self, key, value)
+    def to_dictionary(self):
+        """dictionary representation of a Rectangle"""
+        dict_of_rectangle = {"id": self.id,
+                             "width": self.width,
+                             "height": self.height,
+                             "x": self.x,
+                             "y": self.y}
+        return dict_of_rectangle

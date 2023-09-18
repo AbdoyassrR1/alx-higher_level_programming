@@ -109,3 +109,27 @@ class Rectangle(Base):
         [Rectangle] (<id>) <x>/<y> - <width>/<height>
         """ 
         return f"[Rectangle] {self.id} {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
+    def update(self, *args, **kwagrs):
+        """hat assigns an argument to each attribute:
+        1st argument should be the id attribute
+        2nd argument should be the width attribute
+        3rd argument should be the height attribute
+        4th argument should be the x attribute
+        5th argument should be the y attribute"""
+        if args and len(args) != 0:
+            for arg in args:
+                
+                if len(args) >= 1:
+                    self.id = args[0]
+                elif len(args) >= 2:
+                    self.width = args[1]
+                elif len(args) >= 3:
+                    self.height = args[2]
+                elif len(args) >= 4:
+                    self.x = args[3]
+                elif len(args) >= 5:
+                    self.y = args[4]
+        else:
+            for key, value in kwagrs.items():
+                setattr(self, key, value)

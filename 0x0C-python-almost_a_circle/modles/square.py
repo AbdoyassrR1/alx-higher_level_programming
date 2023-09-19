@@ -7,6 +7,7 @@ from modles.rectangle import Rectangle
 
 class Square(Rectangle):
     """class square that inherits from Rectangle"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """Constructor method"""
         super().__init__(size, size, x, y, id)
@@ -19,7 +20,7 @@ class Square(Rectangle):
     @size.setter
     def size(self, val):
         """size setter"""
-        if type(val) is not int:
+        if not isinstance(val, int):
             raise TypeError("size must be an integer")
         if val < 0:
             raise ValueError("size must be greater than zero!")
@@ -35,7 +36,7 @@ class Square(Rectangle):
         """returns the dictionary representation of a Square"""
 
         return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
-    
+
     def update(self, *args, **kwargs):
         """that assigns attr1st argument should be the id attribute
             2nd argument should be the size attribute
@@ -55,11 +56,12 @@ class Square(Rectangle):
             else:
                 for key, value in kwargs.items():
                     return (key, value)
+
     def to_dictionary(self):
         """returns the dictionary representation of a Square
         """
         dict_of_square = {"id": self.id,
-                "x": self.x,
-                "size": self.size,
-                "y": self.y}
+                          "x": self.x,
+                          "size": self.size,
+                          "y": self.y}
         return dict_of_square

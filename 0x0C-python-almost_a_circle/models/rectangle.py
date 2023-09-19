@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """only class rectangle """
 
-from modles.base import Base
+from models.base import Base
 
 
 class Rectangle(Base):

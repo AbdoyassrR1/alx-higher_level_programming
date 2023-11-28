@@ -1,1 +1,0 @@
-javescript warm up

@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """
-Get all states
+Get all states from database hbtn_0e_0_usa
+usage 0-select_states.py\
+    <database user name>\
+    <database password>\
+    <database name>
 """
 import sys
 import MySQLdb

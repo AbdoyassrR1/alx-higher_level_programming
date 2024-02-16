@@ -16,7 +16,7 @@ connection = MySQLdb.connect(
     database=sys.argv[3]
 )
 cursor = connection.cursor()
-cursor.execute("SELECT * FROM states")
+cursor.execute("SELECT * FROM `states`")
 for state in cursor.fetchall():
     if state[1] == sys.argv[4]:
         print(state)

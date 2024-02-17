@@ -10,13 +10,15 @@ usage file name\
 import sys
 import MySQLdb
 
-connection = MySQLdb.connect(
-    user=sys.argv[1],
-    password=sys.argv[2],
-    database=sys.argv[3]
-)
-cursor = connection.cursor()
-cursor.execute("SELECT * FROM `states`")
-for state in cursor.fetchall():
-    if state[1] == sys.argv[4]:
-        print(state)
+if __name__ == "__main__":
+
+    connection = MySQLdb.connect(
+        user=sys.argv[1],
+        password=sys.argv[2],
+        database=sys.argv[3]
+    )
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM `states`")
+    for state in cursor.fetchall():
+        if state[1] == sys.argv[4]:
+            print(state)

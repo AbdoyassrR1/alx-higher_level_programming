@@ -6,14 +6,11 @@ if __name__ == "__main__":
     from sqlalchemy.engine.url import URL
     from sqlalchemy.orm import Session
     from model_state import Base, State
-    from sys import argv
+    import sys
 
-    db = {'drivername': 'mysql+mysqldb',
-          'host': 'localhost',
-          'port': '3306',
-          'username': argv[1],
-          'password': argv[2],
-          'database': argv[3]}
+    db = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
+                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                            pool_pre_ping=True)
 
     url = URL(**db)
     engine = create_engine(url, pool_pre_ping=True)

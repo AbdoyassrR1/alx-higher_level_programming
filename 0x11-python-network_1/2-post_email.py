@@ -2,9 +2,9 @@
 """
 post email mudule
 """
-
 import sys
-import urllib
+import urllib.parse
+import urllib.request
 
 
 if __name__ == "__main__":

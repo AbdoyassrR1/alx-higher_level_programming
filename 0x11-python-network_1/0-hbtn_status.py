@@ -6,7 +6,7 @@ fetch status module
 from urllib import request
 
 if __name__ == "__main__":
-    
+
     with request.urlopen("https://alx-intranet.hbtn.io/status") as response:
         head = response.read()
         print("Body response:")

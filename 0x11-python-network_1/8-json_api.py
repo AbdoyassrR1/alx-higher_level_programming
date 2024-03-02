@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-
+json api
 """
 
-import requests
-import sys
 
 if __name__ == "__main__":
+    import requests
+    import sys
 
     q = sys.argv[1] if len(sys.argv) > 1 else ""
     url = "http://0.0.0.0:5000/search_user"

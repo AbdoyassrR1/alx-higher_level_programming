@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-status module 
+status module
 """
 
 import requests
